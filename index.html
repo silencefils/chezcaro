@@ -6,6 +6,35 @@
   <title>Borne - Chez Caro</title>
   <style>
     * { box-sizing: border-box; }
+    #panier {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100vw;
+  max-width: 100vw;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.12);
+  background: #fff;
+  padding: 12px 20px;
+  /* ...autres styles */
+}
+
+@media (max-width: 900px) {
+  .cart {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: unset;
+    bottom: 0;
+    height: auto;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  }
+  /* ... */
+}
+
+
+
 
     /* --- Rendre tout responsive de base --- */
 body, html {
@@ -161,6 +190,13 @@ img, video {
   z-index: 1;
 }
 
+@media (max-width: 900px) {
+  main {
+    padding-bottom: 140px !important;
+  }
+}
+
+
 .category span {
   position: relative;
   z-index: 2;
@@ -277,7 +313,21 @@ img, video {
   user-select: none;
 }
 
-    }
+
+  @media (max-width: 900px) {
+  main,
+  .items,
+  .categories,
+  .container,
+  body {
+    padding-bottom: 160px !important;
+  }
+}
+
+}
+
+
+    
   </style>
 </head>
 <body>
@@ -297,7 +347,7 @@ img, video {
     <ul id="cartList"></ul>
     <p><strong>Total :</strong> <span id="total">0.00€</span></p>
     <button onclick="validerCommande()">Valider la commande</button>
-    <button onclick="resetCart()" style="margin-top: 0.5rem; background: #dc3545;">Vider le panier</button>
+    <button onclick="resetCart()" style="margin-top: 0.5rem; background: red;">Vider le panier</button>
 
   </aside>
 
