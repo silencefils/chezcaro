@@ -6,6 +6,43 @@
   <title>Borne - Chez Caro</title>
   <style>
     * { box-sizing: border-box; }
+
+    /* --- Rendre tout responsive de base --- */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Mobile First --- */
+.container, main, section {
+  width: 96%;
+  margin: auto;
+}
+
+/* --- Tablette (iPad ~ 768px) --- */
+@media (min-width: 600px) {
+  .container, main, section {
+    width: 90%;
+  }
+}
+
+/* --- Desktop (ordi) --- */
+@media (min-width: 900px) {
+  .container, main, section {
+    width: 70%;
+    max-width: 1200px;
+  }
+}
+
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
